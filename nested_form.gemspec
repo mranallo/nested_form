@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = "nested_form"
+  s.name        = "nested_form-internal"
   s.version     = "0.0.0"
   s.authors     = ["Ryan Bates", "Andrea Singh"]
   s.email       = "ryan@railscasts.com"

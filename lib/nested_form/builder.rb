@@ -13,7 +13,11 @@ module NestedForm
     end
 
     def link_to_remove(name)
-      hidden_field(:_destroy) + @template.link_to(name, "javascript:void(0)", :class => "remove_nested_fields")
+      hidden_field(:_destroy) + @template.link_to(name, "javascript:void(0)", :class => "remove_nested_fields", :confirm => 'Are you sure?')
+    end
+    
+    def icon_to_remove(title)
+      hidden_field(:_destroy) + @template.icon_to(:delete, "javascript:void(0)", :class => "remove_nested_fields", :title => title, :confirm => 'Are you sure?')
     end
 
     def fields_for_with_nested_attributes(association, args, block)
